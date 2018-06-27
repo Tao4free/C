@@ -1,7 +1,7 @@
 /*
  * Author:Tao Lu <hakufu.asano@gmail.com>
  *
- * Solution for Exercise_1-01, Chapter01 
+ * Solution for Exercise_1-1, Chapter01 
  */
 
 #include <stdio.h>
