@@ -1,2 +1,2 @@
 # C
-Codes and exercise about c
+Codes and exercises about c
