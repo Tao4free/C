@@ -14,26 +14,23 @@ main(void)
 	int c, nb, nt, nl;
 
 	nb = nt = nl = 0;
-	while ( (c = getchar()) != EOF)
-
-	/* this doesn't work well unlike fortran */
-	/*	if (c == ' ') {
-	  		++nb;
-	  		printf("blank");}
-	  	if (c == '\t') {
-	  		++nt;
-	  		printf("tab");}
-		if (c == '\n') {
-			++nl;
-			printf("newline");}
-	*/
+	while ( (c = getchar()) != EOF) {
 		if (c == ' ')
+	  		++nb;
+	  	if (c == '\t')
+	  		++nt;
+		if (c == '\n')
+			++nl;
+	
+	/*	if (c == ' ')
 	      		++nb;
 		else if (c == '\t')
 	      		++nt;
 		else if (c == '\n')
 	      		++nl;
-	
+	*/
+	}
+
 	printf("number of blanks: %d\n", nb);
 	printf("number of tabs: %d\n", nt);
 	printf("number of newline: %d\n", nl);
