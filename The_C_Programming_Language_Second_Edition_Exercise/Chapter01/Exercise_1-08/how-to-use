@@ -1,0 +1,10 @@
+method 1: 
+	1) compile count.c to count.o
+	2) run count.o
+	3) enter something from keyboard and enter
+	4) enter 'Ctrl D' to give a EOF
+
+method 2:
+	cat test.input | ./count.o
+	less test.input | ./count.o
+	etc.
