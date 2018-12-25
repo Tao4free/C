@@ -24,14 +24,14 @@ main(void)
 	while ( (c = getchar()) != EOF) {
 		++nc;
 		if (c == '\n')
-	      		++nl;
+			++nl;
 		if (c == ' ' || c == '\n' || c == '\t') {
-	      		state = OUT;
+			state = OUT;
 			++nout;
 		}
 		else if (state == OUT) {
-	      		state = IN;
-	      		++nw;
+			state = IN;
+			++nw;
 			nout = 0;
 		}
 		if (state == IN)

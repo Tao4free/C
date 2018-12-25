@@ -1,7 +1,7 @@
 /*
  * Author:Tao Lu <hakufu.asano@gmail.com>
  *
- * Solution for Exercise_1-13, Chapter01 
+ * Sample or hint for Exercise_1-13, Chapter01 
  */
 
 #include <stdio.h>
@@ -26,13 +26,13 @@ main(void)
 			++nwhite;
 		else
 			++nother;
+	}
 
 	printf("digits =");
 	for (i = 0; i < 10; ++i)
 		printf(" %d", ndigit[i]);
 	printf(", white space = %d, other = %d\n",
 			nwhite, nother);
-	}
 
 	return 0; 
 }
