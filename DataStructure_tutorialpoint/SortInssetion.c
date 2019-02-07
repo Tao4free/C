@@ -1,9 +1,7 @@
 /*
  * Author:Tao Lu <hakufu.asano@gmail.com>
  *
- * Solution for bubble sorting
- * reference: https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_program_in_c.htm
- * modification: call by refernce
+ * Solution for insertion sorting
  */
 
 #include <stdio.h>
@@ -35,34 +33,29 @@ void display(int *list) {
 	printf("]");
 }
 
-void bubbleSort(int *list) {
-	int temp;
-	int i,j;
 
-	bool swap = false;
+void insertionSort(int *list) {
+	int valueToInsert, holePosition;
+	int i;
 
-	for(i = 0; i < MAX-1; i++) {
-		swap = false;
+	for(i = 0; i < MAX; i++) {
+		valueToInsert = list[i];
+		holePosition = i;
 
-		for(j = 0; j < MAX-1-i; j++) {
-			if(list[j] > list[j+1]) {
-				temp = list[j];
-				list[j] = list[j+1];
-				list[j+1] = temp;
-
-				swap = true;
-			}
+		while(holePosition > 0 & list[holePosition-1] > valueToInsert) {
+			list[holePosition] = list[holePosition-1];
+			holePosition = holePosition - 1;
 		}
 
-		if(!swap) {
-			break;
-		}
+		list[holePosition] = valueToInsert;
 	}
 
 	return;
 }
 
 	   
+
+
 int main(void) {
 	start = clock();
 
@@ -74,18 +67,18 @@ int main(void) {
 		list[n] = number;
 	}
 
-	printf("Before bubble sort: \n");
+	printf("Before insertion sort: \n");
 	//display(list);
 	printf("\n");
 
-	printf("After bubble sort: \n");
-	bubbleSort(list);
+	printf("After insertion sort: \n");
+	insertionSort(list);
 	//display(list);
 	printf("\n");
-	
+
 	end = clock();
 	cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 	printf("Took %f seconds to execute \n", cpu_time_used);
-
+	
 	return 0;
 }
