@@ -1,0 +1,91 @@
+#Direction:low; If after recursion; Else before return#
+last recursion low = 0,  mid = 1, high = 0 
+recursion low = 0,  mid = 0, high = 1 
+recursion low = 0,  mid = 1, high = 2 
+recursion low = 0,  mid = 2, high = 4 
+recursion low = 0,  mid = 4, high = 9 
+
+#Direction:low; If before recursion; Else before return#
+recursion low = 0,  mid = 4, high = 9 
+recursion low = 0,  mid = 2, high = 4 
+recursion low = 0,  mid = 1, high = 2 
+recursion low = 0,  mid = 0, high = 1 
+last recursion low = 0,  mid = 0, high = 0 
+
+#Direction:low; If before recursion; Else after return#
+recursion low = 0,  mid = 4, high = 9 
+recursion low = 0,  mid = 2, high = 4 
+recursion low = 0,  mid = 1, high = 2 
+recursion low = 0,  mid = 0, high = 1 
+
+#Direction:low; If test recursion; Else before return#
+before recursion low = 0,  mid = 4, high = 9 
+before recursion low = 0,  mid = 2, high = 4 
+before recursion low = 0,  mid = 1, high = 2 
+before recursion low = 0,  mid = 0, high = 1 
+last recursion low = 0,  mid = 0, high = 0 
+after recursion low = 0,  mid = 0, high = 1 
+after recursion low = 0,  mid = 1, high = 2 
+after recursion low = 0,  mid = 2, high = 4 
+after recursion low = 0,  mid = 4, high = 9 
+
+#Direction:both; If test recursion; Else before return#
+before recursion        low = 0,  mid = 4, high = 9 
+before recursion        low = 0,  mid = 2, high = 4 
+before recursion        low = 0,  mid = 1, high = 2 
+before recursion        low = 0,  mid = 0, high = 1 
+last recursion          low = 0,  mid = 0, high = 0 
+after low recursion     low = 0,  mid = 0, high = 1 
+last recursion          low = 1,  mid = 0, high = 1 
+after high recursion    low = 0,  mid = 0, high = 1 
+after low recursion     low = 0,  mid = 1, high = 2 
+last recursion          low = 2,  mid = 0, high = 2 
+after high recursion    low = 0,  mid = 1, high = 2 
+after low recursion     low = 0,  mid = 2, high = 4 
+before recursion        low = 3,  mid = 3, high = 4 
+last recursion          low = 3,  mid = 0, high = 3 
+after low recursion     low = 3,  mid = 3, high = 4 
+last recursion          low = 4,  mid = 0, high = 4 
+after high recursion    low = 3,  mid = 3, high = 4 
+after high recursion    low = 0,  mid = 2, high = 4 
+after low recursion     low = 0,  mid = 4, high = 9 
+before recursion        low = 5,  mid = 7, high = 9 
+before recursion        low = 5,  mid = 6, high = 7 
+before recursion        low = 5,  mid = 5, high = 6 
+last recursion          low = 5,  mid = 0, high = 5 
+after low recursion     low = 5,  mid = 5, high = 6 
+last recursion          low = 6,  mid = 0, high = 6 
+after high recursion    low = 5,  mid = 5, high = 6 
+after low recursion     low = 5,  mid = 6, high = 7 
+last recursion          low = 7,  mid = 0, high = 7 
+after high recursion    low = 5,  mid = 6, high = 7 
+after low recursion     low = 5,  mid = 7, high = 9 
+before recursion        low = 8,  mid = 8, high = 9 
+last recursion          low = 8,  mid = 0, high = 8 
+after low recursion     low = 8,  mid = 8, high = 9 
+last recursion          low = 9,  mid = 0, high = 9 
+after high recursion    low = 8,  mid = 8, high = 9 
+after high recursion    low = 5,  mid = 7, high = 9 
+after high recursion    low = 0,  mid = 4, high = 9 
+
+#Direction:both; Only output the commit part after first divide()#
+after low recursion     low = 0,  mid = 0, high = 1 
+after low recursion     low = 0,  mid = 1, high = 2 
+after low recursion     low = 0,  mid = 2, high = 4 
+after low recursion     low = 3,  mid = 3, high = 4 
+after low recursion     low = 0,  mid = 4, high = 9 
+after low recursion     low = 5,  mid = 5, high = 6 
+after low recursion     low = 5,  mid = 6, high = 7 
+after low recursion     low = 5,  mid = 7, high = 9 
+after low recursion     low = 8,  mid = 8, high = 9 
+
+#Direction:both; Only output the commit part after second divide()#
+after high recursion    low = 0,  mid = 0, high = 1 
+after high recursion    low = 0,  mid = 1, high = 2 
+after high recursion    low = 3,  mid = 3, high = 4 
+after high recursion    low = 0,  mid = 2, high = 4 
+after high recursion    low = 5,  mid = 5, high = 6 
+after high recursion    low = 5,  mid = 6, high = 7 
+after high recursion    low = 8,  mid = 8, high = 9 
+after high recursion    low = 5,  mid = 7, high = 9 
+after high recursion    low = 0,  mid = 4, high = 9 
