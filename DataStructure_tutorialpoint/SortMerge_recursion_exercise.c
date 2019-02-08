@@ -35,18 +35,31 @@ void display(int *list) {
 
 
 void merge(int low, int mid, int high){
-	printf("commit merge                low = %d,  mid = %d, high = %d \n", low, mid, high);
+	printf(" \n", low, mid, high);
+	printf("commit merge  low = % 2d,  mid = % 2d, high = % 2d \n", low, mid, high);
 	int l1, l2, i;
 
 	for(l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++) {
 		if(list[l1] <= list[l2]) {
 			b[i] = list[l1++];
 			printf("if i = %d, b[%d] = %d \n", i, i, b[i]);
+			printf("if l1 = %d, l2 = %d \n", l1, l2);
 		} else {
 			b[i] = list[l2++];
 			printf("else i = %d, b[%d] = %d \n", i, i, b[i]);
+			printf("else l1 = %d, l2 = %d \n", l1, l2);
 		}
 	}
+
+	while(l1 <= mid)
+		b[i++] = list[l1++];
+
+	while(l2 <= high)
+		b[i++] = list[l2++];
+
+	for(i = low; i <= high; i++)
+		list[i] = b[i];
+	display(b), printf("\n");
 }
 
 
@@ -86,7 +99,7 @@ int main(void) {
 
 	//printf("After insertion sort: \n");
 	//insertionSort(list);
-	////display(list);
+	//display(list);
 	//printf("\n");
 
 	return 0;
