@@ -35,7 +35,7 @@ void display(int *list) {
 
 
 void merge(int low, int mid, int high){
-    display(list);
+    printf("Input list is \n"), display(list), printf("\n");
 	printf("start   low high mid \n");
 	printf("        %3d %3d %3d \n", low, high, mid);
 	int l1, l2, i;
