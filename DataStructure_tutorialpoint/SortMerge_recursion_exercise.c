@@ -35,27 +35,36 @@ void display(int *list) {
 
 
 void merge(int low, int mid, int high){
-	printf(" \n", low, mid, high);
-	printf("commit merge  low = % 2d,  mid = % 2d, high = % 2d \n", low, mid, high);
+    display(list);
+	printf("start   low high mid \n");
+	printf("        %3d %3d %3d \n", low, high, mid);
 	int l1, l2, i;
 
+	printf("Forloop\n");
 	for(l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++) {
+	printf("              l1 = %2d        l2 = %2d    i = %2d  mid = %2d\n", l1, l2, i, mid);
+	printf("        list[%2d] = %2d  list[%2d] = %2d\n", l1, list[l1], l2, list[l2]);
 		if(list[l1] <= list[l2]) {
+	        printf("           b[%2d] =     list[%2d] = %2d\n", i,  l1, list[l1]);
 			b[i] = list[l1++];
-			printf("if i = %d, b[%d] = %d \n", i, i, b[i]);
-			printf("if l1 = %d, l2 = %d \n", l1, l2);
 		} else {
+	        printf("           b[%2d] =     list[%2d] = %2d\n", i,  l2, list[l2]);
 			b[i] = list[l2++];
-			printf("else i = %d, b[%d] = %d \n", i, i, b[i]);
-			printf("else l1 = %d, l2 = %d \n", l1, l2);
 		}
 	}
+	printf("              l1 = %2d        l2 = %2d    i = %2d  mid = %2d\n", l1, l2, i, mid);
 
-	while(l1 <= mid)
+	printf("Forwhile low\n");
+	while(l1 <= mid) {
+	    printf("           b[%2d] =     list[%2d] = %2d\n", i,  l1, list[l1]);
 		b[i++] = list[l1++];
+	}
 
-	while(l2 <= high)
+	printf("Forwhile high\n");
+	while(l2 <= high) {
+	    printf("           b[%2d] =     list[%2d] = %2d\n", i,  l2, list[l2]);
 		b[i++] = list[l2++];
+	}
 
 	for(i = low; i <= high; i++)
 		list[i] = b[i];
