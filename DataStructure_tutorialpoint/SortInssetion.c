@@ -2,6 +2,8 @@
  * Author:Tao Lu <hakufu.asano@gmail.com>
  *
  * Solution for insertion sorting
+ * 
+ * Reference: https://www.tutorialspoint.com/data_structures_algorithms/insertion_sort_program_in_c.htm
  */
 
 #include <stdio.h>
@@ -42,7 +44,7 @@ void insertionSort(int *list) {
 		valueToInsert = list[i];
 		holePosition = i;
 
-		while(holePosition > 0 & list[holePosition-1] > valueToInsert) {
+		while(holePosition > 0 && list[holePosition-1] > valueToInsert) {
 			list[holePosition] = list[holePosition-1];
 			holePosition = holePosition - 1;
 		}
@@ -68,12 +70,12 @@ int main(void) {
 	}
 
 	printf("Before insertion sort: \n");
-	//display(list);
+	display(list);
 	printf("\n");
 
 	printf("After insertion sort: \n");
 	insertionSort(list);
-	//display(list);
+	display(list);
 	printf("\n");
 
 	end = clock();

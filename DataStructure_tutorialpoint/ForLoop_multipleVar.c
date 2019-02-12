@@ -37,14 +37,19 @@ void display(int *list) {
 void mulVarLoop(int low, int mid, int high){
 	printf("Input  low = %d,  mid = %d, high = %d \n", low, mid, high);
 	int l1, l2, i;
+    int origin = 8, interval = 1;
+
+	for(l1 =0; l1 <= high; l1++) 
+		printf("origin = %2d\n", origin), origin -= interval;
 
 	for(l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++) {
-		printf("loop i = % 2d l1 = % 2d, l2 = % 2d \n", i, l1, l2);
-		printf("before l1++ l1 = % 2d, before l2++ l2 = % 2d \n", l1, l2);
+		return;
+		//printf("loop i = % 2d l1 = % 2d, l2 = % 2d \n", i, l1, l2);
+		//printf("before l1++ l1 = % 2d, before l2++ l2 = % 2d \n", l1, l2);
 		//printf("list[l1++] = % 2d, list[l2++]  = % 2d \n", list[l1++], list[l2++]);
-		printf("list[++l1] = % 2d, list[++l2]  = % 2d \n", list[++l1], list[++l2]);
+		//printf("list[++l1] = % 2d, list[++l2]  = % 2d \n", list[++l1], list[++l2]);
 		//l1++, l2++; 
-		printf("after  l1++ l1 = % 2d, after  l2++ l2 = % 2d \n", l1, l2);
+		//printf("after  l1++ l1 = % 2d, after  l2++ l2 = % 2d \n", l1, l2);
 	}
 }
 

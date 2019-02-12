@@ -1,9 +1,9 @@
 /*
  * Author:Tao Lu <hakufu.asano@gmail.com>
  *
- * Solution for merge sorting
+ * Solution for shell sort
  *
- * Reference: https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_program_in_c.htm
+ * Reference:https://www.tutorialspoint.com/data_structures_algorithms/shell_sort_program_in_c.htm
  */
 
 #include <stdio.h>
@@ -17,12 +17,12 @@
 clock_t start, end;
 double cpu_time_used;
 
-int list[MAX], b[MAX-1];
+int list[MAX];
 
 
 void display(int *list) {
 	int i, j, k;
-	int step = 20;
+	int step = 10;
 
 	printf("[ ");
 	printf("\n");
@@ -38,44 +38,33 @@ void display(int *list) {
 }
 
 
-void merge(int low, int mid, int high){
-	int l1, l2, i;
+void shellSort(){
+	int inner, outer, insertValue;
+	int elements = MAX;
+	int interval = 1;
 
-	for(l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++) {
-		if(list[l1] <= list[l2]) {
-			b[i] = list[l1++];
-		} else {
-			b[i] = list[l2++];
+	while(interval <= elements / 3)
+		interval = interval*3 + 1;
+
+	while(interval > 0) {
+	
+		for(outer = interval; outer < elements; outer++) {
+			insertValue = list[outer];
+			inner = outer;
+		
+			while(inner - interval >= 0 && list[inner - interval] >= insertValue){
+				list[inner] = list[inner - interval];
+				inner -= interval;
+			}
+		
+			list[inner] = insertValue;
 		}
+		
+		interval = (interval - 1) / 3;
 	}
 
-	while(l1 <= mid) {
-		b[i++] = list[l1++];
-	}
-
-	while(l2 <= high) {
-		b[i++] = list[l2++];
-	}
-
-	for(i = low; i <= high; i++)
-		list[i] = b[i];
 }
 
-
-void divide(int low, int high) {
-	int mid;
-
-	if(low < high) {
-		mid = (low + high) / 2;
-
-		divide(low, mid);
-		divide(mid +1, high);
-
-		merge(low, mid, high);
-	} else {
-		return;
-	}
-}
 
 int main(void) {
 	start = clock();
@@ -93,7 +82,7 @@ int main(void) {
 	printf("\n");
 
 	printf("After insertion sort: \n");
-	divide(0, MAX-1);
+	shellSort();
 	display(list);
 	printf("\n");
 
