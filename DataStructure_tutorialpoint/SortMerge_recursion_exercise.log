@@ -89,6 +89,8 @@ after high recursion    low = 5,  mid = 6, high = 7
 after high recursion    low = 8,  mid = 8, high = 9 
 after high recursion    low = 5,  mid = 7, high = 9 
 after high recursion    low = 0,  mid = 4, high = 9 
+
+#Trace all#
 [ 
 50 24 35 37 27 23 20 41 42 7 
 ]
