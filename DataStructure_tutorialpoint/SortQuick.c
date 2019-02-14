@@ -38,31 +38,49 @@ void display(int *list) {
 }
 
 
-void shellSort(){
-	int inner, outer, insertValue;
-	int elements = MAX;
-	int interval = 1;
+void swap(int index1, int index2) {
+	int temp = list[index1];
+	list[index1] = list[index2];
+	list[index2] = temp;
+}
 
-	while(interval <= elements / 3)
-		interval = interval*3 + 1;
 
-	while(interval > 0) {
-	
-		for(outer = interval; outer < elements; outer++) {
-			insertValue = list[outer];
-			inner = outer;
-		
-			while(inner - interval >= 0 && list[inner - interval] >= insertValue){
-				list[inner] = list[inner - interval];
-				inner -= interval;
-			}
-		
-			list[inner] = insertValue;
+int divide(int left, int right, int pivot){
+	int leftPosition = left - 1;
+	int rightPosition = right;
+
+	while(true) {
+		while(list[++leftPosition] < pivot) {
+			// do nothing
 		}
-		
-		interval = (interval - 1) / 3;
+
+		while(rightPosition > 0 && list[--rightPosition] > pivot) {
+			// do nothing
+		}
+
+		if(leftPosition >= rightPosition) {
+			break;
+		}else {
+			swap(leftPosition, rightPosition);
+		}
 	}
 
+	swap(leftPosition, right);
+
+	return leftPosition;
+}
+
+
+void quickSort(int left, int right){
+	//printf("%2d, %2d\n", left, right);
+	if(left >= right) {
+		return;
+	} else {
+		int pivot = list[right];
+		int dividePosition = divide(left, right, pivot);
+		quickSort(left, dividePosition -1);
+		quickSort(dividePosition + 1, right);
+	}
 }
 
 
@@ -82,7 +100,7 @@ int main(void) {
 	printf("\n");
 
 	printf("After insertion sort: \n");
-	shellSort();
+	quickSort(0, MAX-1);
 	display(list);
 	printf("\n");
 
