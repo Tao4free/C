@@ -1,0 +1,182 @@
+[ 28 50 25 23 52 94 98 8 29 9 ]
+strt =    0, end = 1 
+flag is    1
+strt =    0, end = 2 
+flag is    0
+strt =    0, end = 3 
+flag is    0
+strt =    0, end = 4 
+flag is    0
+strt =    0, end = 5 
+flag is    0
+strt =    0, end = 6 
+flag is    0
+strt =    0, end = 7 
+flag is    0
+strt =    0, end = 8 
+flag is    0
+strt =    0, end = 9 
+flag is    0
+strt =    0, end = 1 
+flag is    1
+strt =    1, end = 2 
+flag is    1
+strt =    1, end = 3 
+flag is    0
+strt =    1, end = 4 
+flag is    0
+strt =    1, end = 5 
+flag is    0
+strt =    1, end = 6 
+flag is    0
+strt =    1, end = 7 
+flag is    0
+strt =    1, end = 8 
+flag is    0
+strt =    1, end = 9 
+flag is    0
+strt =    0, end = 2 
+flag is    0
+strt =    1, end = 2 
+flag is    1
+strt =    2, end = 3 
+flag is    1
+strt =    2, end = 4 
+flag is    0
+strt =    2, end = 5 
+flag is    0
+strt =    2, end = 6 
+flag is    0
+strt =    2, end = 7 
+flag is    0
+strt =    2, end = 8 
+flag is    0
+strt =    2, end = 9 
+flag is    0
+strt =    0, end = 3 
+flag is    0
+strt =    1, end = 3 
+flag is    0
+strt =    2, end = 3 
+flag is    1
+strt =    3, end = 4 
+flag is    1
+strt =    3, end = 5 
+flag is    0
+strt =    3, end = 6 
+flag is    0
+strt =    3, end = 7 
+flag is    0
+strt =    3, end = 8 
+flag is    0
+strt =    3, end = 9 
+flag is    0
+strt =    0, end = 4 
+flag is    0
+strt =    1, end = 4 
+flag is    0
+strt =    2, end = 4 
+flag is    0
+strt =    3, end = 4 
+flag is    1
+strt =    4, end = 5 
+flag is    1
+strt =    4, end = 6 
+flag is    0
+strt =    4, end = 7 
+flag is    0
+strt =    4, end = 8 
+flag is    0
+strt =    4, end = 9 
+flag is    0
+strt =    0, end = 5 
+flag is    0
+strt =    1, end = 5 
+flag is    0
+strt =    2, end = 5 
+flag is    0
+strt =    3, end = 5 
+flag is    0
+strt =    4, end = 5 
+flag is    1
+strt =    5, end = 6 
+flag is    1
+strt =    5, end = 7 
+flag is    0
+strt =    5, end = 8 
+flag is    0
+strt =    5, end = 9 
+flag is    0
+strt =    0, end = 6 
+flag is    0
+strt =    1, end = 6 
+flag is    0
+strt =    2, end = 6 
+flag is    0
+strt =    3, end = 6 
+flag is    0
+strt =    4, end = 6 
+flag is    0
+strt =    5, end = 6 
+flag is    1
+strt =    6, end = 7 
+flag is    1
+strt =    6, end = 8 
+flag is    0
+strt =    6, end = 9 
+flag is    0
+strt =    0, end = 7 
+flag is    0
+strt =    1, end = 7 
+flag is    0
+strt =    2, end = 7 
+flag is    0
+strt =    3, end = 7 
+flag is    0
+strt =    4, end = 7 
+flag is    0
+strt =    5, end = 7 
+flag is    0
+strt =    6, end = 7 
+flag is    1
+strt =    7, end = 8 
+flag is    1
+strt =    7, end = 9 
+flag is    0
+strt =    0, end = 8 
+flag is    0
+strt =    1, end = 8 
+flag is    0
+strt =    2, end = 8 
+flag is    0
+strt =    3, end = 8 
+flag is    0
+strt =    4, end = 8 
+flag is    0
+strt =    5, end = 8 
+flag is    0
+strt =    6, end = 8 
+flag is    0
+strt =    7, end = 8 
+flag is    1
+strt =    8, end = 9 
+flag is    1
+strt =    0, end = 9 
+flag is    0
+strt =    1, end = 9 
+flag is    0
+strt =    2, end = 9 
+flag is    0
+strt =    3, end = 9 
+flag is    0
+strt =    4, end = 9 
+flag is    0
+strt =    5, end = 9 
+flag is    0
+strt =    6, end = 9 
+flag is    0
+strt =    7, end = 9 
+flag is    0
+strt =    8, end = 9 
+flag is    1
+Took 0.000000 seconds to execute 
